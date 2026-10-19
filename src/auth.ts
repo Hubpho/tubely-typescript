@@ -19,7 +19,6 @@ export async function checkPasswordHash(password: string, hash: string) {
     return false;
   }
 }
-
 type payload = Pick<JwtPayload, "iss" | "sub" | "iat" | "exp">;
 
 export function makeJWT(userID: string, secret: string, expiresIn: number) {
